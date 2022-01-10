@@ -88,3 +88,8 @@ Here's what the word importance might look like if we apply it to our example
 Here's what that might look like if we apply it to the normalized text:
 
 ![image](https://user-images.githubusercontent.com/92245436/148731764-e60f6e9a-99e6-4c41-993d-656723443411.png)
+
+### Models vs. Algorithms
+- **Models** are the **specific representations** learned from data
+- **Algorithms** are the processes of **learning**
+- **Model=Algorithm(Data)**
