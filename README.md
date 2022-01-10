@@ -10,3 +10,8 @@ Example: playing checkers.
 - E = the experience of playing many games of checkers
 - T = the task of playing checkers.
 - P = the probability that the program will win the next game.
+
+### Classic definition
+Machine learning is a data science technique used to extract patterns from data, allowing computers to identify related data, and forecast future outcomes, behaviors, and trends.
+
+![image](https://user-images.githubusercontent.com/92245436/148722635-a3b2f831-d008-4e80-88c2-bf7ef6eb812c.png)
