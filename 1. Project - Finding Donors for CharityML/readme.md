@@ -1,4 +1,6 @@
 # Project: Finding Donors for *CharityML*
+<img src="images/Charity.png" width="800" height="450" alt="Charity Image" />
+
 ### Description
 CharityML is a fictitious charity organization located in the heart of Silicon Valley that was established to provide financial support for people eager to learn machine learning. After nearly 32,000 letters were sent to people in the community, CharityML determined that every donation they received came from someone that was making more than $50,000 annually. To expand their potential donor base, CharityML has decided to send letters to residents of California, but to only those most likely to donate to the charity. With nearly 15 million working Californians, CharityML has brought you on board to help build an algorithm to best identify potential donors and reduce overhead cost of sending mail. Your goal will be evaluate and optimize several different supervised learners to determine which algorithm will provide the highest donation yield while also reducing the total number of letters being sent.
 
@@ -45,9 +47,10 @@ Before data can be used as input for machine learning algorithms, it often must 
 ### Transforming Skewed Continuous Features
 A dataset may sometimes contain at least one feature whose values tend to lie near a single number, but will also have a non-trivial number of vastly larger or smaller values than that single number.  Algorithms can be sensitive to such distributions of values and can underperform if the range is not properly normalized. With the census dataset two features fit this description: '`capital-gain'` and `'capital-loss'`. 
 
-<img width="640" alt="image" src="https://user-images.githubusercontent.com/92245436/183244955-594ffca9-ef7f-406f-bb47-a15368bb5c0c.png">
+<img src="images/Skewed Distribution.png" width="800" height="350" alt="Skewed Distribution" />
 
-<img width="640" alt="image" src="https://user-images.githubusercontent.com/92245436/183244966-f37ed6a3-7f0b-4a96-be47-e9ee66eab367.png">
+<img src="images/Log Transformed Distribution.png" width="800" height="350" alt="Log Transformed Distribution.png" />
+
 
 ### Normalizing Numerical Features
 In addition to performing transformations on features that are highly skewed, it is often good practice to perform some type of scaling on numerical features. Applying a scaling to the data does not change the shape of each feature's distribution (such as `'capital-gain'` or `'capital-loss'` above); however, normalization ensures that each feature is treated equally when applying supervised learners.
@@ -114,7 +117,7 @@ For classification problems that are skewed in their classification distribution
 ### Implementation - Creating a Training and Predicting Pipeline
 To properly evaluate the performance of each model you've chosen, it's important that you create a training and predicting pipeline that allows you to quickly and effectively train models using various sizes of training data and perform predictions on the testing data.
 
-<img width="655" alt="image" src="https://user-images.githubusercontent.com/92245436/183246568-7c250e75-b6eb-41d3-be77-4321d1ce385e.png">
+<img src="images/Performance Metrics.png" width="1000" height="600" alt="Log Transformed Distribution.png" />
 
 ## Improving Results
 In this final section, you will choose from the three supervised learning models the *best* model to use on the student data. You will then perform a grid search optimization for the model over the entire training set (`X_train` and `y_train`) by tuning at least one parameter to improve upon the untuned model's F-score. 
@@ -137,7 +140,7 @@ An important task when performing supervised learning on a dataset like the cens
 
 Choose a scikit-learn classifier (e.g., adaboost, random forests) that has a `feature_importance_` attribute, which is a function that ranks the importance of features according to the chosen classifier. 
 
-<img width="524" alt="image" src="https://user-images.githubusercontent.com/92245436/183248234-812f1e4c-752b-4c54-b664-e8473fdee7a8.png">
+<img src="images/Feature Importance .png" width="500" height="300" alt="Performance Metrics" />
 
 
 ### Feature Selection
