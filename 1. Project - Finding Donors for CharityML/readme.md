@@ -115,3 +115,38 @@ For classification problems that are skewed in their classification distribution
 To properly evaluate the performance of each model you've chosen, it's important that you create a training and predicting pipeline that allows you to quickly and effectively train models using various sizes of training data and perform predictions on the testing data.
 
 <img width="655" alt="image" src="https://user-images.githubusercontent.com/92245436/183246568-7c250e75-b6eb-41d3-be77-4321d1ce385e.png">
+
+## Improving Results
+In this final section, you will choose from the three supervised learning models the *best* model to use on the student data. You will then perform a grid search optimization for the model over the entire training set (`X_train` and `y_train`) by tuning at least one parameter to improve upon the untuned model's F-score. 
+
+### Choosing the Best Model
+Out of the 3 models, the best model for this data is Gradient Boosting Classifier.Although GBC does take the longest time to train, but it gives the best accuracy and F-score for testing set. Accuracy and F-score for Decision Tree is quite high for testing set but low for traing set this may be result in overfitting.
+
+### Final Model Evaluation
+#### Results:
+
+|     Metric     | Naive Predictor   | Unoptimized Model | Optimized Model |
+| :------------: | :---------------: | :-------------: | :-------------:   |
+| Accuracy Score |      0.2478       |     0.8630      |       0.8708      |
+| F-score        |      0.2917       |     0.7395      |       0.7531      |
+
+----
+## Feature Importance
+
+An important task when performing supervised learning on a dataset like the census data we study here is determining which features provide the most predictive power. By focusing on the relationship between only a few crucial features and the target label we simplify our understanding of the phenomenon, which is most always a useful thing to do. In the case of this project, that means we wish to identify a small number of features that most strongly predict whether an individual makes at most or more than \$50,000.
+
+Choose a scikit-learn classifier (e.g., adaboost, random forests) that has a `feature_importance_` attribute, which is a function that ranks the importance of features according to the chosen classifier. 
+
+<img width="524" alt="image" src="https://user-images.githubusercontent.com/92245436/183248234-812f1e4c-752b-4c54-b664-e8473fdee7a8.png">
+
+
+### Feature Selection
+How does a model perform if we only use a subset of all the available features in the data? With less features required to train, the expectation is that training and prediction time is much lower — at the cost of performance metrics. From the visualization above, we see that the top five most important features contribute more than half of the importance of **all** features present in the data. This hints that we can attempt to *reduce the feature space* and simplify the information required for the model to learn. Optimized your model, and train it on the same training set *with only the top five important features*. 
+
+
+#### Results:
+
+|     Metric     | Naive Predictor   | Unoptimized Model | Optimized Model  |Reduced Data Model  |
+| :------------: | :---------------: | :-------------: | :-------------:   | :-------------:     |
+| Accuracy Score |      0.2478       |     0.8630      |       0.8708      |     0.8588          |
+| F-score        |      0.2917       |     0.7395      |       0.7531      |     0.7249          |
