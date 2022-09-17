@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Note: Only needed for demo purposes. Delete for production sites.
+-->
+<html>
+	<head>
+		<title>Charity ML</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+
+
+				<!-- Additional Elements -->
+					<section class="wrapper style1 align-left">
+						<div class="inner">
+							<header class="major">
+								<h2 style="text-align:center"> <strong> Project: Finding Donors for CharityML </strong></h2>
+								
+								<span class="image fit main"><img src="images/Charity.jpg" width="200px" height="450px"alt="" /></span>
+							</header>
+
+							<hr />
+								<!-- Heading -->
+									<section>
+										<div class="content">
+
+											<h2> <strong>Description</strong></h2>
+								<p>CharityML is a fictitious charity organization located in the heart of Silicon Valley that was established to provide financial support for people eager to learn machine learning. After nearly 32,000 letters were sent to people in the community, CharityML determined that every donation they received came from someone that was making more than $50,000 annually.</p>
+								<p> 
+								 To expand their potential donor base, CharityML has decided to send letters to residents of California, but to only those most likely to donate to the charity. With nearly 15 million working Californians, CharityML has brought you on board to help build an algorithm to best identify potential donors and reduce overhead cost of sending mail. </p>
+								 <p> 
+								
+								<p><h3><b>Goal: </b></h3> To evaluate and optimize several different supervised Models to determine which algorithm will provide the highest donation yield while also reducing the total number of letters being sent. 
+								</p>
+
+				
+								<b> Check My </b> - 
+								<a href="https://github.com/Iam-Mak/Udacity-Machine-Learning-Projects/blob/main/1.%20Project%20-%20Finding%20Donors%20for%20CharityML/Finding%20Donors%20for%20CharityML.ipynb"> Jupyter notebook</a>.
+
+								<hr />
+
+								<header>
+									
+									<h2> <b> Dataset </b></h2>
+								</header>
+								<p>The dataset for this project originates from the <a href= "https://archive.ics.uci.edu/ml/datasets/Census+Income"> UCI Machine Learning Repository</a>
+								The datset was donated by Ron Kohavi and Barry Becker, after being published in the article <b> "Scaling Up the Accuracy of Naive-Bayes Classifiers: A Decision-Tree Hybrid"</b>. You can find the article by Ron Kohavi <a href= "https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf"> online</a>
+							</p>
+
+								<header>
+									<h3><b>Data Exploration </b></h3>
+									
+								</header>
+								<p>
+									A cursory investigation of the dataset will determine how many individuals fit into either group, and the percentage of these individuals making more than <b> $50,000</b>. 
+								<li>The total number of records, <b>45222</b> </li> 
+								<li> The number of individuals making more than <b> $50,000 </b> annually, <b>1 1208</b>.</li> 
+								<li> The number of individuals making at most <b>$50,000</b> annually, <b>34014</b>.</li> 
+								<li> The percentage of individuals making more than <b>$50,000</b> annually, <b>24.78%</b>. </li> </p>
+
+								<hr />
+
+
+								<header>
+									
+									<h2><b>Preparing the Data</b></h2>
+								</header>
+								<p>Before data can be used as input for machine learning algorithms, it often must be cleaned, formatted, and restructured — this is typically known as preprocessing. Fortunately, for this dataset, there are no invalid or missing entries we must deal with, however, there are some qualities about certain features that must be adjusted.
+							</p>
+
+								<header>
+									<h3><b>Transforming Skewed Continuous Features</b></h3>
+									
+								</header>
+								<p>
+									A dataset may sometimes contain at least one feature whose values tend to lie near a single number, but will also have a non-trivial number of vastly larger or smaller values than that single number. Algorithms can be sensitive to such distributions of values and can underperform if the range is not properly normalized. With the census dataset two features fit this description:<b> <i> capital-gain</b> </i> and <b> <i>capital-loss</i></b>.
+
+								</p>
+									<span class="image fit main"><img src="images/Skewed Distribution.png" width="600" height="400"alt="" /></span>
+									<span class="image fit main"><img src="images/Log Transformed Distribution.png" width="600" height="400"alt="" /></span>
+								
+								
+								
+								
+
+
+								<header>
+									<h3><b>Normalizing Numerical Features</b></h3>
+									
+								</header>
+								<p>
+									In addition to performing transformations on features that are highly skewed, it is often good practice to perform some type of scaling on numerical features. Applying a scaling to the data does not change the shape of each feature's distribution (such as 'capital-gain' or 'capital-loss' above); however, normalization ensures that each feature is treated equally when applying supervised learners. </p>
+
+
+								<header>
+									<h3><b>Data Preprocessing : one-hot encoding</b></h3>
+									
+								</header>
+								<p>
+									We can see there are several features for each record that are non-numeric. Typically, learning algorithms expect input to be numeric, which requires that non-numeric features (called categorical variables) be converted. One popular way to convert categorical variables is by using the one-hot encoding scheme. 
+								<li> 103 total features after one-hot encoding.</li>
+								</p>
+
+								<header>
+									<h3><b>Shuffle and Split Data</b></h3>
+									
+								</header>
+								<p>
+									Now all categorical variables have been converted into numerical features, and all numerical features have been normalized. As always, we will now split the data (both features and their labels) into training and test sets. 80% of the data will be used for training and 20% for testing.
+								<li> Training set has 36177 samples.</li>
+								<li> Testing set has 9045 samples.</li>
+								</p>
+
+								<hr />
+
+								<header>
+									<h2><b>Supervised Learning Models</b></h2>
+									
+									
+								</header>
+								<p>
+								<li>Decision Trees </li> 
+								<li> Gradient Boosting</li> 
+								<li> Stochastic Gradient Descent Classifier (SGDC)</b>.</li> 
+								</p>
+
+								<span class="image fit main"><img src="images/Performance Metrics.png" width="1000" height="600"alt="" /></span>
+								
+
+								<header>
+									<h3><b>Improving Results</b></h3>
+									
+								</header>
+
+								<p> 
+									Here we will choose from the three supervised learning models the best model to use on the student data. After that we will then perform a grid search optimization for the model over the entire training set (X_train and y_train) by tuning at least one parameter to improve upon the untuned model's F-score.
+
+									<header>
+										<h3><b> Choosing the Best Model</b></h3>
+										
+									</header>
+									
+									Out of the 3 models, the best model for this data is <b>Gradient Boosting Classifier</b> .Although GBC does take the longest time to train, but it gives the best accuracy and F-score for testing set. Accuracy and F-score for Decision Tree is quite high for testing set but low for traing set this may be result in overfitting.
+								</p>
+
+
+								</p>
+								<hr />
+
+								<header>
+								
+								<h2><b> Feature Importance</b></h2></header>
+								<p> An important task when performing supervised learning on a dataset like the census data we study here is determining which features provide the most predictive power. By focusing on the relationship between only a few crucial features and the target label we simplify our understanding of the phenomenon, which is most always a useful thing to do. In the case of this project, that means we wish to identify a small number of features that most strongly predict whether an individual makes at most or more than $50,000.
+							</p>
+
+								<header>
+									<h3><b> Feature Selection</b></h3>
+									
+								</header>
+								<p>
+									How does a model perform if we only use a subset of all the available features in the data? With less features required to train, the expectation is that training and prediction time is much lower — at the cost of performance metrics. From the visualization above, we see that the top five most important features contribute more than half of the importance of all features present in the data. This hints that we can attempt to reduce the feature space and simplify the information required for the model to learn. Optimized your model, and train it on the same training set with only the top five important features.
+								</p>
+									<span class="image fit main"><img src="images/Feature Importance.png" width="600" height="450" alt="" /></span>	
+
+								
+								<hr />
+								<header>
+									<h2> <b>Results </b></h2>
+									
+								</header>
+
+
+							<span class="image fit main"><img src="images/Final Result.png" width="200" height="200"alt="" /></span>
+								<hr />
+									
+
+				<!-- Footer -->
+				<footer class="wrapper style1 align-center">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="https://twitter.com/iam_mak_"  class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/iam-mak/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/Iam-Mak" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+						</ul>
+						
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<!-- Note: Only needed for demo purposes. Delete for production sites. -->
+			<script src="assets/js/demo.js"></script>
+
+	</body>
+</html>
