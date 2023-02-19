@@ -17,35 +17,37 @@ from time import time
 from sklearn.metrics import f1_score, accuracy_score
 
 
-def distribution(data, transformed = False):
+def distribution(data, transformed=False):
     """
     Visualization code for displaying skewed distributions of features
     """
     
     # Create figure
-    fig = pl.figure(figsize = (11,5));
+    fig, axes = pl.subplots(nrows=1, ncols=2, figsize=(12, 5))
 
     # Skewed feature plotting
-    for i, feature in enumerate(['capital-gain','capital-loss']):
-        ax = fig.add_subplot(1, 2, i+1)
-        ax.hist(data[feature], bins = 25, color = '#00A0A0')
-        ax.set_title("'%s' Feature Distribution"%(feature), fontsize = 14)
-        ax.set_xlabel("Value")
-        ax.set_ylabel("Number of Records")
+    for i, feature in enumerate(['capital-gain', 'capital-loss']):
+        ax = axes[i]
+        ax.hist(data[feature], bins=25, color='#1f77b4')
+        ax.set_title("'%s' Feature Distribution" % (feature), fontsize=14, fontweight='bold', color='#000000')
+        ax.set_xlabel("Value", fontsize=12, fontweight='bold', color='#444444')
+        ax.set_ylabel("Number of Records", fontsize=12, fontweight='bold', color='#444444')
         ax.set_ylim((0, 2000))
         ax.set_yticks([0, 500, 1000, 1500, 2000])
         ax.set_yticklabels([0, 500, 1000, 1500, ">2000"])
+        ax.spines['right'].set_visible(True)
+        ax.spines['top'].set_visible(True)
+        ax.grid(True)
 
     # Plot aesthetics
     if transformed:
-        fig.suptitle("Log-transformed Distributions of Continuous Census Data Features", \
-            fontsize = 16, y = 1.03)
+        fig.suptitle("Log-transformed Distributions of Continuous Census Data Features", fontsize=16, y=1.03, fontweight='bold', color='#000000')
     else:
-        fig.suptitle("Skewed Distributions of Continuous Census Data Features", \
-            fontsize = 16, y = 1.03)
+        fig.suptitle("Skewed Distributions of Continuous Census Data Features", fontsize=16, y=1.03, fontweight='bold', color='#000000')
 
     fig.tight_layout()
-    fig.show()
+    pl.show()
+
 
 
 def evaluate(results, accuracy, f1):
@@ -60,11 +62,11 @@ def evaluate(results, accuracy, f1):
     """
   
     # Create figure
-    fig, ax = pl.subplots(2, 3, figsize = (15,8))
+    fig, ax = pl.subplots(2, 3, figsize = (16,10))
 
     # Constants
     bar_width = 0.3
-    colors = ['#A00000','#00A0A0','#00A000']
+    colors =  ['#A2D5F2','#F38080','#374F6A']
     
     # Super loop to plot four panels of data
     for k, learner in enumerate(results.keys()):
@@ -133,9 +135,9 @@ def feature_plot(importances, X_train, y_train):
     # Creat the plot
     fig = pl.figure(figsize = (9,5))
     pl.title("Normalized Weights for First Five Most Predictive Features", fontsize = 16)
-    pl.bar(np.arange(5), values, width = 0.6, align="center", color = '#00A000', \
+    pl.bar(np.arange(5), values, width = 0.6, align="center", color = '#ED7A2F', \
           label = "Feature Weight")
-    pl.bar(np.arange(5) - 0.3, np.cumsum(values), width = 0.2, align = "center", color = '#00A0A0', \
+    pl.bar(np.arange(5) - 0.3, np.cumsum(values), width = 0.2, align = "center", color = '#0F4A6A', \
           label = "Cumulative Feature Weight")
     pl.xticks(np.arange(5), columns)
     pl.xlim((-0.5, 4.5))
