@@ -50,9 +50,9 @@ Before data can be used as input for machine learning algorithms, it often must 
 ### Transforming Skewed Continuous Features
 A dataset may sometimes contain at least one feature whose values tend to lie near a single number, but will also have a non-trivial number of vastly larger or smaller values than that single number.  Algorithms can be sensitive to such distributions of values and can underperform if the range is not properly normalized. With the census dataset two features fit this description: '`capital-gain'` and `'capital-loss'`. 
 
-<img src="images/Skewed Distribution.png" width="800" height="350" alt="Skewed Distribution" />
+<img src="images/Skewed Distribution.jpg" width="800" height="350" alt="Skewed Distribution" />
 
-<img src="images/Log Transformed Distribution.png" width="800" height="350" alt="Log Transformed Distribution.png" />
+<img src="images/Log Transformed Distribution.jpg" width="800" height="350" alt="Log Transformed Distribution.png" />
 
 
 ### Normalizing Numerical Features
