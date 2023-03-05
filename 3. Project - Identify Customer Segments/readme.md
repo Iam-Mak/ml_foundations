@@ -6,7 +6,7 @@
 In this project, we will work with real-life data provided to us by Bertelsmann partners AZ Direct and Arvato Finance Solution. The data here concerns a company that performs mail-order sales in Germany. Their main question of interest is to identify *facets* of the population that are most likely to be purchasers of their products for a mailout campaign. Our job as a data scientist will be to use unsupervised learning techniques to organize the general population into clusters, then use those clusters to see which of them comprise the main user base for the company. Prior to applying the machine learning methods, we will also need to assess and clean the data in order to convert the data into a usable form.
 
 #### Check My 
-- [Jupyter notebook](https://github.com/Iam-Mak/Udacity-Machine-Learning-Projects/blob/main/1.%20Project%20-%20Finding%20Donors%20for%20CharityML/Finding%20Donors%20for%20CharityML.ipynb)
+- [Jupyter notebook](https://github.com/Iam-Mak/Udacity-Machine-Learning-Projects/blob/main/3.%20Project%20-%20Identify%20Customer%20Segments/Identify%20Customer%20Segments.ipynb)
 
 ### Software and Libraries
 This project uses the following software and Python libraries:
