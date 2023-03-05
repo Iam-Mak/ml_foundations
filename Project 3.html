@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Note: Only needed for demo purposes. Delete for production sites.
+-->
+<html>
+	<head>
+		<title>Identify Customer Segments</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+
+
+				<!-- Additional Elements -->
+					<section class="wrapper style1 align-left">
+						<div class="inner">
+							<header class="major">
+								<h2 style="text-align:center"> <strong> Project: Identify Customer Segments </strong></h2>
+								
+								<span class="image fit main"><img src="images/Customer Seg.png" width="200px" height="500px"alt="" /></span>
+							</header>
+
+							<hr />
+								<!-- Heading -->
+									<section>
+										<div class="content">
+
+											<h2> <strong>Description</strong></h2>
+								<p> In this project, we will work with real-life data provided to us by Bertelsmann partners AZ Direct and Arvato Finance Solution. The data here concerns a company that performs mail-order sales in Germany. Their main question of interest is to identify <b>facets</b> of the population that are most likely to be purchasers of their products for a mailout campaign.</p>
+								<p> 
+									Our job as a data scientist will be to use unsupervised learning techniques to organize the general population into clusters, then use those clusters to see which of them comprise the main user base for the company. Prior to applying the machine learning methods, we will also need to assess and clean the data in order to convert the data into a usable form.
+								</p>
+								
+								
+								<p><h3><b>Goal: </b></h3> Look at relationships between demographics features, organize the population into clusters, and see how prevalent customers are in each of the segments obtained.
+								</p>
+
+								<!--
+								<b> Check My </b> - 
+								<a href="https://github.com/Iam-Mak/Udacity-Machine-Learning-Projects/blob/main/2.%20Project%20-%20Image%20Classifier/Image%20Classifier%20Project.ipynb"> Jupyter notebook</a>.
+
+								<hr />
+
+								<header>
+									
+									<h2> <b> Dataset </b></h2>
+								</header>
+								<p>We will use `tensorflow_datasets` to load the  <a href= "https://www.tensorflow.org/datasets/catalog/oxford_flowers102"> Oxford Flowers 102 dataset</a>
+									.The Oxford Flowers 102 dataset is a consistent of 102 flower categories commonly occurring in the United Kingdom. Each class consists of between 40 and 258 images. The images have large scale, pose and light variations. In addition, there are categories that have large variations within the category and several very similar categories.
+							</p>
+
+								<header>
+									<h3><b>Data Exploration </b></h3>
+								</header>
+								<p>
+									This dataset has 3 splits: <b>train</b>, <b>test</b>, and <b>validation</b>.
+								<li> The split train has <b>1020</b> records</li> 
+								<li> The split test has<b>6149</b> records.</li> 
+								<li> The split validation has <b>1020</b> records.</li> 
+								<li> Number of Classes is: <b>102</b>. </li> </p>
+
+								<p>We'll also need to make sure the training data is normalized and resized to 224x224 pixels as required by the pre-trained networks.
+									The validation and testing sets are used to measure the model's performance on data it hasn't seen yet, but we'll still need to normalize and resize the images to the appropriate size.</p> 
+									<header>
+										<h4><b>Shape and Corresponding Label</b></h4>
+									</header>
+								<img src='2. Project - Image Classifier/assets/Shape and Label.png' width=400px>
+								<li> The shape of this image is: <b>(500, 667, 3)</b>.</li> 
+								<li> The label of this image is:<b>72</b>.</li> 
+								<li> The Name of this image is: <b>water lily</b>. </li> 
+								<hr />
+
+								<header>									
+									<h2><b>Build and Train the Classifier</b></h2>
+								</header>
+								<header>
+									<h3><b>Model.Summary()</b></h3>
+								</header>
+								<p>
+								<li> Total params: <b>2,388,646</b>.</li> 
+								<li> Trainable params: <b>130,662</b>.</li> 
+								<li> Non-trainable params:  <b>2,257,984</b>. </li> 
+  								</p>
+								<header>
+									<h3><b>Training and Validation Performance</b></h3>
+								</header>
+								<img src='2. Project - Image Classifier/assets/Training and Validation Loss.png' width=800px>
+
+								<header>
+									<h3><b>Testing your Network</b></h3>
+								</header>
+								<p>
+								<li> Accuracy on the TEST Set: <b>4.012%</b>.</li> 
+								<li> Loss on the TEST Set: <b>1.285</b>. </li> 
+								</p>
+								<hr />
+
+								<header>
+									<h2><b>Final Output</b></h2>									
+								</header>
+								<p>It's always good to check the predictions made by your model to make sure they are correct.</p>
+
+								<img src='2. Project - Image Classifier/assets/cautleya_spicata.png' width=700px>
+								<img src='2. Project - Image Classifier/assets/hard-leaved_pocket_orchid.png' width=700px>
+								<img src='2. Project - Image Classifier/assets/orange_dahlia.png' width=700px>
+								<img src='2. Project - Image Classifier/assets/wild_pansy.png' width=700px>
+								<hr />
+									
+ -->
+				<!-- Footer -->
+				<footer class="wrapper style1 align-center">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="https://twitter.com/iam_mak_"  class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/iam-mak/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/Iam-Mak" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+						</ul>
+						
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<!-- Note: Only needed for demo purposes. Delete for production sites. -->
+			<script src="assets/js/demo.js"></script>
+
+	</body>
+</html>
