@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Udacity-Machine-Learning-Projects
-=======
 # Machine Learning
 ## What is Machine Learning?
 
@@ -16,4 +13,4 @@ Example: playing checkers.
 
 ### Classic definition
 Machine learning is a data science technique used to extract patterns from data, allowing computers to identify related data, and forecast future outcomes, behaviors, and trends.
->>>>>>> Udacity-Intro-to-Machine-Learning-with-TensorFlow/main
+
