@@ -44,14 +44,14 @@ Dropped columns:
 - KK_KUNDENTYP
 - KBA05_BAUMAX
 
-<img src='images/Columns Missing Values.png' width=700px>
+<img src='Images/Columns Missing Values.png' width=700px>
 
 - Dhape of DataFrame `(891221, 79)`.
 - Total number of missing values after removing outlier is 5035304
 
 
 ###  Missing Data in Each Row
-<img src='images/Rows Missing Values.png' width=700px>
+<img src='Images/Rows Missing Values.png' width=700px>
 
 We observed that nearly 10% of row data has missing more than 20% values which can be ignored to simplify further processing. We will be going ahead with the dataset having below 20% of missing data. Replacing the nan with using most frequent value in each category.
 - Rows with missing data above 20 % : 99325 or 11.14 % of all data
@@ -84,19 +84,19 @@ For categorical data, we need to encode the levels as dummy variables.Depending 
 ## Feature Transformation
 - **StandardScaler:** Standardize features by removing the mean and scaling to unit variance.
 - **Principal Component Analysis (PCA)** is an unsupervised machine learning technique to reduce the dimensionality of data consisting of a large number of inter-related attributes (or features or variables) but at the same time retaining as much as possible of the variation present in the original data.
-<img src='images/PCA.png' width=700px>
+<img src='Images/PCA.png' width=700px>
 Selecting 60 components for our Analysis.
 
 
 ## Clustering
 To Find Optimum Value for K
 
-<img src='images/AvgDistK.png' width=700px>
+<img src='Images/AvgDistK.png' width=700px>
 
 - Selecting k = 14 Clusters for our Customer Segmentation.
 
 ### Compare Customer Data to Demographics Data
-<img src='images/Customer Comparision.png' width=1000px>
+<img src='Images/Customer Comparision.png' width=1000px>
 
 By looking at the graph we can easily find that the cluster points 3, 5 and 7 data points are highly likely customer segments because the larger praportion of customer data is present at these points while data points that are defined by cluster points 0, 4 and 8 are less likely to be turned into customers are general population data dominates these clusters.
 
