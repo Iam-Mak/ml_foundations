@@ -1,4 +1,7 @@
 ## Supervised Machine Learning
+
+
+## Resources
 ### Lesson 1
 #### Mathematics
 - [Calculus](https://betterexplained.com/guides/calculus/): Maximizing and minimizing algebraic equations
