@@ -3,15 +3,17 @@
 In this , we'll develop the math of the closed form solution, which we introduced in the last video. First, we'll do it for the 2-dimensional case, and then for the general case.
 
 ## 2-Dimensional solution
-Our data will be the values $ x_1, x_2, . . . x_m $ and our labels will be the values  $ y_1, y_2, . . . y_n $. Let's call our weights $ w_1$ and $w_2 $ . Therefore, our predictions are $ \hat{y} = w_1x_1 + w_2 $ . The mean squared error is
-$$ E(w_1, w_2) = \frac{1}{2m} \sum_{i=1}^{m} (\hat{y}_i - y_i)^2 $$
+Our data will be the values $x_1, x_2, . . . x_m$ and our labels will be the values  $y_1, y_2, . . . y_n$. Let's call our weights $w_1$ and $w_2$ . Therefore, our predictions are $\hat{y} = w_1x_1 + w_2$ . The mean squared error is
 
-We need to minimize this error function. Therefore, the factor of $ 1/2m $ can be ignored. Now, replacing the value of $\hat{y}$, we get
-$$ E(w_1, w_2) =  \sum_{i=1}^{m} (\hat{y}_i - y_i)^2 $$
+$$E(w_1, w_2) = \frac{1}{2m} \sum_{i=1}^{m} (\hat{y}_i - y_i)^2$$
+
+We need to minimize this error function. Therefore, the factor of $1/2m$ can be ignored. Now, replacing the value of $\hat{y}$, we get
+
+$$E(w_1, w_2) =  \sum_{i=1}^{m} (\hat{y}_i - y_i)^2$$
 
 $$ E(w_1, w_2) =  \sum_{i=1}^{m} (w_1x_i + w_2 - y_i)^2 $$
 
-Now, in order to minimize this error function, we need to take the derivatives with respect to $ w_1 $ and $ w_1 $ and set them equal to 0.
+Now, in order to minimize this error function, we need to take the derivatives with respect to $w_1$ and $w_1$ and set them equal to 0.
 
 Using the chain rule, we get
 
@@ -40,7 +42,7 @@ $$
  w_1(\sum_{i=1}^m x_i) + w_2(m)= \sum_{i=1}^m y_i
 $$
 
-We can use any method to solve 2 equations and 2 variables. For example, if we multiply the first equation by $ (\sum_{i=1}^m x_i) $ , the second one by $m$, subtract them to obtain a value for $w_1$, and then replace this value in the first equation, we get the following:
+We can use any method to solve 2 equations and 2 variables. For example, if we multiply the first equation by $(\sum_{i=1}^m x_i)$ , the second one by $m$, subtract them to obtain a value for $w_1$, and then replace this value in the first equation, we get the following:
 
 $$
 w_1 = \frac{m\sum_{i=1}^m x_iy_i - \sum_{i=1}^m x_i \sum_{i=1}^m y_i}{m\sum_{i=1}^m x_i^2 - (\sum_{i=1}^m x_i)^2}
@@ -88,8 +90,8 @@ $$
 \frac{\partial E}{\partial W} =  2X^TXW - 2X^Ty
 $$
 
-And in order to set this equal to zero, we need $ X^TXW-X^Ty =0 $, or equivalently,
- $ W = (X^TX)^{-1}X^Ty $
+And in order to set this equal to zero, we need $X^TXW-X^Ty =0$, or equivalently,
+ $W = (X^TX)^{-1}X^Ty$
  
  That's it, that's our closed form solution for $W$!
 
