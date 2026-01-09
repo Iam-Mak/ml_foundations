@@ -1,16 +1,15 @@
-# Machine Learning
-## What is Machine Learning?
+## Introduction to Machine Learning with TensorFlow
 
-Two definitions of Machine Learning are offered. 
+**Foundational machine learning techniques - from data manipulation to unsupervised and supervised algorithms.**
 
-- **Arthur Samuel** described it as: *"the field of study that gives computers the ability to learn without being explicitly programmed." This is an older, informal definition.*
+Bertelsmann's tech scholarships on the online education platform Udacity to strengthen people’s tech skills. Specifically, the Group is funding 15,000 tech scholarships for Challenge Courses in Cloud, Data and AI. In addition, the top 1,600 participants will receive a scholarship for a full Nanodegree in their selected subject area.
 
-- **Tom Mitchell** provides a more modern definition: *"A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."* <br />
-Example: playing checkers.
-    - E = the experience of playing many games of checkers
-    - T = the task of playing checkers.
-    - P = the probability that the program will win the next game.
+## Supervised Machine Learning
+### Finding Donors of CharityML
 
-### Classic definition
-Machine learning is a data science technique used to extract patterns from data, allowing computers to identify related data, and forecast future outcomes, behaviors, and trends.
 
+## Deep Learning
+### Image Classifier Project
+
+## Unsupervised Machine Learning
+### Identify Customer Segments

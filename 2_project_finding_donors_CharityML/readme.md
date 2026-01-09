@@ -1,11 +1,11 @@
 # Project: Finding Donors for *CharityML*
-<img src="images/Charity.png" width="800" height="450" alt="Charity Image" />
+
 
 ### Description
 CharityML is a fictitious charity organization located in the heart of Silicon Valley that was established to provide financial support for people eager to learn machine learning. After nearly 32,000 letters were sent to people in the community, CharityML determined that every donation they received came from someone that was making more than $50,000 annually. To expand their potential donor base, CharityML has decided to send letters to residents of California, but to only those most likely to donate to the charity. With nearly 15 million working Californians, CharityML has brought you on board to help build an algorithm to best identify potential donors and reduce overhead cost of sending mail. Your goal will be evaluate and optimize several different supervised learners to determine which algorithm will provide the highest donation yield while also reducing the total number of letters being sent.
 
 #### Check My 
-- [Jupyter notebook](https://github.com/Iam-Mak/Udacity-Machine-Learning-Projects/blob/main/1.%20Project%20-%20Finding%20Donors%20for%20CharityML/Finding%20Donors%20for%20CharityML.ipynb)
+- [Jupyter notebook](charityML.ipynb)
 
 ### Software and Libraries
 This project uses the following software and Python libraries:
@@ -50,9 +50,9 @@ Before data can be used as input for machine learning algorithms, it often must 
 ### Transforming Skewed Continuous Features
 A dataset may sometimes contain at least one feature whose values tend to lie near a single number, but will also have a non-trivial number of vastly larger or smaller values than that single number.  Algorithms can be sensitive to such distributions of values and can underperform if the range is not properly normalized. With the census dataset two features fit this description: '`capital-gain'` and `'capital-loss'`. 
 
-<img src="images/Skewed Distribution.jpg" width="800" height="350" alt="Skewed Distribution" />
+<img src="images/Skewed-Distributions.png" width="800" height="350" alt="Skewed Distribution" />
 
-<img src="images/Log Transformed Distribution.jpg" width="800" height="350" alt="Log Transformed Distribution.png" />
+<img src="images/Log-Transformed-Distributions.png" width="800" height="350" alt="Log Transformed Distribution.png" />
 
 
 ### Normalizing Numerical Features
@@ -120,7 +120,7 @@ For classification problems that are skewed in their classification distribution
 ### Implementation - Creating a Training and Predicting Pipeline
 To properly evaluate the performance of each model you've chosen, it's important that you create a training and predicting pipeline that allows you to quickly and effectively train models using various sizes of training data and perform predictions on the testing data.
 
-<img src="images/Performance Metrics.png" width="1000" height="600" alt="Log Transformed Distribution.png" />
+<img src="images/performance_metrics.png" width="1000" height="600" alt="Log Transformed Distribution.png" />
 
 ## Improving Results
 In this final section, you will choose from the three supervised learning models the *best* model to use on the student data. You will then perform a grid search optimization for the model over the entire training set (`X_train` and `y_train`) by tuning at least one parameter to improve upon the untuned model's F-score. 
@@ -143,7 +143,7 @@ An important task when performing supervised learning on a dataset like the cens
 
 Choose a scikit-learn classifier (e.g., adaboost, random forests) that has a `feature_importance_` attribute, which is a function that ranks the importance of features according to the chosen classifier. 
 
-<img src="images/Feature Importance .png" width="500" height="300" alt="Performance Metrics" />
+<img src="images/feature_importance.png" width="500" height="300" alt="Performance Metrics" />
 
 
 ### Feature Selection
