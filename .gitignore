@@ -224,3 +224,59 @@ logs/
 data/
 *.csv
 
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Data (VERY important)
+data/
+datasets/
+*.csv
+*.tsv
+
+# TensorFlow datasets
+tensorflow_datasets/
+~/tensorflow_datasets/
+
+# Model files
+*.h5
+*.hdf5
+*.ckpt
+*.pb
+*.tflite
+
+# Training outputs
+logs/
+checkpoints/
+runs/
+
+# Images generated during training
+*.png
+*.jpg
+
+# Environment
+venv/
+.env
+
+# MacOS
+.DS_Store
+
+.ipynb_checkpoints/
+__pycache__/
+
+# datasets
+datasets/
+tensorflow_datasets/
+
+# training outputs
+logs/
+checkpoints/
+
+# environment
+venv/
+
+# system files
+.DS_Store
