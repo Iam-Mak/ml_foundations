@@ -8601,3 +8601,32 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+
+/* Force proper centering */
+.banner.style1 .image {
+    position: relative;
+    background: #ffffff;
+}
+
+/* Absolute center (always works) */
+.banner.style1 .image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width:65%;
+    max-height: 70%;
+
+    width: auto;
+    height: auto;
+}
+
+.image.fit img {
+    max-width: 800px;   /* control width */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
