@@ -2,7 +2,7 @@
 
 A pretrained MobileNetV2 model is used for efficient and accurate image classification.
 
-<img src="../images/flower_samples_with_labels.png" width="850">
+<img src="../../images/flower_samples_with_labels.png" width="850">
 
 ## Description
 
@@ -82,4 +82,4 @@ Input images are processed before being passed to the model:
 
 The trained model predicts the most likely classes along with their probability scores.
 
-<img src="../images/predictions_grid.png" width="1000">
+<img src="../../images/predictions_grid.png" width="1000">
