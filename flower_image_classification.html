@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
-	Note: Only needed for demo purposes. Delete for production sites.
--->
 <html>
+	
 	<head>
 		<title>Image Classifier</title>
 		<meta charset="utf-8" />
@@ -14,142 +9,106 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
+
 	<body class="is-preload">
 
+		<section class="wrapper style1 align-left">
+		<div class="inner">
+			<header class="major">
+				<h2 align="center"><strong>Flower Image Classification</strong></h2>
+				<p align="center">
+					<img src="images/flower_classifier.png" 
+						alt="Flower Classification Diagram" 
+						width="1000">
+				</p>
+			</header>
+
+			
+
+			<div class="content">
+
+			<!-- Description -->
+			<h2><strong>Overview</strong></h2>
+			<p>
+				This project builds an image classification system to identify 102 flower species using a pretrained MobileNetV2 model.
+				Transfer learning is applied to efficiently adapt the model to the dataset.
+			</p>
+
+			<p>
+				The model is trained on the 
+				<a href="https://docs.pytorch.org/vision/main/generated/torchvision.datasets.Flowers102.html">
+				Oxford Flowers 102 dataset</a> and performs predictions on unseen images.
+			</p>
+
+			<!-- Goal + Link -->
+			<p>
+				<b>Goal:</b> Train a deep learning model for multi-class flower classification using transfer learning.<br>
+				<b>Notebook:</b> <a href="ml_project/flower_image_classification/notebooks/flower_image_classification.ipynb">View Code</a>
+			</p>
+
+			<hr />
+
+			<!-- Highlights (NEW - very important) -->
+			<h2><b>Key Highlights</b></h2>
+			<ul>
+				<li>Transfer learning using MobileNetV2</li>
+				<li>Fine-tuned for 102 flower categories</li>
+				<li>Lightweight and efficient architecture</li>
+				<li>End-to-end pipeline from training to inference</li>
+			</ul>
+
+			<hr />
+
+			<!-- Dataset -->
+			<h2><b>Dataset</b></h2>
+			<p>
+				The dataset contains 102 flower categories with variations in scale, pose, and lighting.
+			</p>
+
+			<ul>
+				<li>Training images: 1020</li>
+				<li>Validation images: 1020</li>
+				<li>Test images: 6149</li>
+			</ul>
+
+			<p>
+				Images are resized to 224 × 224 and normalized using ImageNet statistics.
+			</p>
+
+			<hr />
+
+			<!-- Model -->
+			<h2><b>Model</b></h2>
+			<p>
+				A pretrained MobileNetV2 model is used as the base architecture. The classifier layer is replaced to match 
+				the 102 classes, and transfer learning with partial fine-tuning is applied.
+			</p>
+
+			<ul>
+				<li>Total parameters: <b>3,504,872</b></li>
+				<li>Trainable parameters: <b>130,662</b></li>
+			</ul>
+
+			<hr />
+
+			<!-- Results -->
+			<h2><b>Results</b></h2>
+
+			<p align="center">
+				<img src="images/predictions_grid.png" width="1000">
+			</p>
+
+			<p align="center"><i>Sample predictions from the trained model</i></p>
+
+			</div>
+		</div>
+		</section>
 
 
-				<!-- Additional Elements -->
-					<section class="wrapper style1 align-left">
-						<div class="inner">
-							<header class="major">
-
-								<h2 align="center"><strong>Flower Image Classification</strong></h2>
-
-								<p align="center">
-									<img src="images/flower_classifier.png" 
-										alt="Flower Classification Diagram" 
-										width="800">
-								</p>
-
-							</header>
-
-							<hr />
-								<!-- Heading -->
-								 <section>
-									<section>
-										<div class="content">
-
-											<h2> <strong>Description</strong></h2>
-											 <p>
-												AI is increasingly integrated into applications for example, a smartphone app can identify flowers from a camera image. This project trains an image classifier to recognize 102 species of flowers using deep learning. We leverage a pretrained convolutional neural network (MobileNetV2) and adapt it for our task via transfer learning.
-												</p>
-
-												<p>
-												The model is trained on the <a href="https://docs.pytorch.org/vision/main/generated/torchvision.datasets.Flowers102.html">Oxford Flowers 102 dataset</a>,
-												which contains 102 flower categories (examples shown above). After training, we use the model for inference on new images.
-												</p>
-											
-
-								
-								<h3><b>Goal:</b></h3>
-            						<p>Build and train a PyTorch-based image classifier to identify flower species using transfer learning.</p>
-
+		
 				
-								<b> Check My </b> - 
-								<a href="flower_image_classification.html"> Jupyter notebook</a>.
-
-								<hr />
-
-								<header>
-									
-									<h2> <b> Dataset </b></h2>
-								</header>
-								<p>
-									The Oxford Flowers 102 dataset is a consistent of 102 flower categories commonly occurring in the United Kingdom. Each class consists of between 40 and 258 images. The images have large scale, pose and light variations. In addition, there are categories that have large variations within the category and several very similar categories.
-							    </p>
-
-								<header>
-								<h3><b>Data Exploration</b></h3>
-								</header>
-								<p>The dataset has three splits (train, validation, test):</p>
-								<ul>
-								<li>Training images: 1020</li>
-								<li>Validation images: 1020</li>
-								<li>Test images: 6149</li>
-								<li>Number of classes: 102</li>
-								</ul>
-								<p>
-								All images are resized to 224 × 224 pixels and normalized (pixel values scaled to [0, 1]
-								and standardized using ImageNet mean/std) to match the input requirements of the model.
-								</p>
-								
-								<header>
-								<h4><b>Shape and Corresponding Label</b></h4>
-								</header>
-								<p><img src="ml_project/flower_image_classification/assets/shape_and_label.png" alt="Example image and its label" width="400"></p>
-								<ul>
-								<li>Image shape: (500, 667, 3)</li>
-								<li>Label: 72</li>
-								<li>Class name: water lily</li>
-								</ul>
-								<hr />
-
-								<header>
-								<h2><b>Build and Train the Classifier</b></h2>
-								</header>
-								<header>
-								<h3><b>Model Architecture</b></h3>
-								</header>
-								<p>
-								We use MobileNetV2 pretrained on ImageNet as the base model. The feature extraction layers are frozen,
-								and the final classifier layer is replaced to match 102 flower classes. This transfer learning approach
-								enables efficient training while leveraging powerful learned features.
-								</p>
-								<h3><b>Model Summary</b></h3>
-								<ul>
-								<li>Total parameters: <b>3,504,872</b></li>
-								<li>Trainable parameters: <b>130,662</b></li>
-								<li>Non-trainable (frozen) parameters: <b>3,374,210</b></li>
-								</ul>
-
-
-								<h3><b>Training</b></h3>
-								<p>
-								The model is trained using PyTorch. We use the CrossEntropyLoss function and the Adam optimizer,
-								and we monitor training and validation accuracy and loss during training.
-								</p>
-
-								<h3><b>Training Performance</b></h3>
-								<p>Example plot of training and validation loss/accuracy over epochs:</p>
-
-								<h3><b>Trained Model</b></h3>
-								<p>
-								The trained model weights are saved as a PyTorch checkpoint file (`.pth`). This allows the model to
-								be reloaded later for inference without retraining.
-								</p>
-
-								<h3><b>Evaluation (Test Set)</b></h3>
-								<p>
-								The model is evaluated on the held-out test set to measure performance on unseen data.
-								</p>
-								<ul>
-
-								<li>Test accuracy: <b>81.786%</b> (example)</li>
-								<li>Test loss: <b>1.1552</b> (example)</li>
-								</ul>
-
-
-								<header>
-								<h2><b>Final Output</b></h2>
-								</header>
-								<p>
-								Finally, we use the trained model to make predictions on new flower images.
-								The output shows the input image alongside a bar chart of the top predicted classes and their probabilities.
-								</p>
-								<img src='images/predictions_grid.png' width=1000px>
-							    <hr />
-									
-
+				
 				<!-- Footer -->
 				<footer class="wrapper style1 align-center">
 					<div class="inner">
