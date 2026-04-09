@@ -253,9 +253,6 @@ logs/
 checkpoints/
 runs/
 
-# Images generated during training
-*.png
-*.jpg
 
 # Environment
 venv/
